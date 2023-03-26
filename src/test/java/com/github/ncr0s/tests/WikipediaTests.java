@@ -1,8 +1,6 @@
 package com.github.ncr0s.tests;
 
-import com.codeborne.selenide.SelenideElement;
 import com.github.javafaker.Faker;
-import dev.failsafe.function.CheckedRunnable;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
@@ -16,7 +14,6 @@ import java.util.Locale;
 
 import static com.codeborne.selenide.CollectionCondition.sizeGreaterThan;
 import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static io.appium.java_client.AppiumBy.accessibilityId;
