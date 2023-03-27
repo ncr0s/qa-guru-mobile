@@ -1,7 +1,7 @@
 package com.github.ncr0s.drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import com.github.ncr0s.config.BrowserstackConfig;
+import com.github.ncr0s.config.MobileConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.MutableCapabilities;
@@ -14,7 +14,7 @@ import java.net.URL;
 
 public class BrowserstackMobileDriver implements WebDriverProvider {
 
-    public static BrowserstackConfig config = ConfigFactory.create(BrowserstackConfig.class,
+    public static MobileConfig config = ConfigFactory.create(MobileConfig.class,
         System.getProperties());
 
     @Nonnull

@@ -1,6 +1,6 @@
 package com.github.ncr0s.helpers;
 
-import com.github.ncr0s.config.BrowserstackConfig;
+import com.github.ncr0s.config.MobileConfig;
 import org.aeonbits.owner.ConfigFactory;
 
 import static com.github.ncr0s.helpers.CustomAllureListener.withCustomTemplates;
@@ -11,7 +11,7 @@ public class Browserstack {
 
     public static String getVideoUrl(String sessionId) {
         String url = format("https://api.browserstack.com/app-automate/sessions/%s.json", sessionId);
-        BrowserstackConfig config = ConfigFactory.create(BrowserstackConfig.class, System.getProperties());
+        MobileConfig config = ConfigFactory.create(MobileConfig.class, System.getProperties());
 
         return given()
             .log().all()
