@@ -16,12 +16,12 @@ import static com.github.ncr0s.helpers.Attach.getSessionId;
 
 public class TestBase {
 
-    public static String deviceHost = System.getProperty("deviceHost");
+    public static String env = System.getProperty("env");
 
     @BeforeAll
     static void beforeAll() {
 
-        switch (deviceHost) {
+        switch (env) {
             case "appium":
                 Configuration.browser = LocalMobileDriver.class.getName();
                 break;
@@ -46,9 +46,9 @@ public class TestBase {
         Attach.pageSource();
         closeWebDriver();
 
-        if (deviceHost.equals("android")) {
+        if (env.equals("android")) {
             Attach.addVideo(sessionId);
-        } else if (deviceHost.equals("ios")) {
+        } else if (env.equals("ios")) {
             Attach.addVideo(sessionId);
         }
     }

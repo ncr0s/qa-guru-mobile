@@ -40,8 +40,8 @@ public class LocalMobileDriver implements WebDriverProvider {
     }
 
     private String getAppPath() {
-        String appUrl = "https://github.com/wikimedia/apps-android-wikipedia/" +
-            "releases/download/latest/app-alpha-universal-release.apk";
+        String appUrl = "https://github.com/ncr0s/apps-android-wikipedia/" +
+            "releases/download/latest/app-alpha-debug.apk";
         String appPath = config.getAppPath();
 
         File app = new File(appPath);
