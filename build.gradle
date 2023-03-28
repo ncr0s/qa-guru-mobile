@@ -32,6 +32,8 @@ dependencies {
             "io.rest-assured:rest-assured:5.3.0",
             "io.qameta.allure:allure-rest-assured:$allureVersion",
             "io.appium:java-client:8.3.0",
+            "commons-io:commons-io:2.11.0",
+            "io.github.bonigarcia:webdrivermanager:5.2.1",
             "org.junit.jupiter:junit-jupiter:5.9.2",
             "com.github.javafaker:javafaker:1.0.2",
             "org.aeonbits.owner:owner:1.0.4",
@@ -65,5 +67,11 @@ task android_tests(type: Test) {
 task ios_tests(type: Test) {
     useJUnitPlatform{
         includeTags("iOS")
+    }
+}
+
+task emulation_test(type: Test) {
+    useJUnitPlatform {
+        includeTags("Android")
     }
 }
